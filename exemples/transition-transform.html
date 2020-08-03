@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      margin: 40px auto;
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      transition: transform 400ms cubic-bezier(.45,-0.87,.08,1.69);
+      transform-origin: left top;
+    }
+
+    .grow:hover {
+      transform: scale(1.2);
+    }
+
+    .rotate:hover {
+      transform: rotate(45deg);
+    }
+
+    .translate:hover {
+      transform: translate(100%);
+    }
+
+    .skew:hover {
+      transform: skew(20deg, 20deg);
+    }
+
+    .rotateY:hover {
+      transform: rotateY(45deg);
+      transform-origin: center center;
+    }
+
+    .transition {
+      margin: 40px auto;
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      transition: width 400ms linear, height 400ms linear 400ms;
+    }
+
+    .transition.active {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box grow">
+    grow
+  </div>
+  <p></p>
+  <div class="box rotate">
+    rotate
+  </div>
+  <div class="box translate">
+    translate
+  </div>
+  <div class="box skew">
+    skew
+  </div>
+  <div class="box rotateY">
+    rotateY
+  </div>
+  <div class="transition"></div>
+  <script>
+    const transitionEl = document.querySelector('.transition');
+    transitionEl.addEventListener('click', () => {
+      transitionEl.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

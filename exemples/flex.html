@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        justify-content: space-evenly;
+        /* align-items: flex-end; */
+      }
+
+      .col {
+        width: 200px;
+        height: 200px;
+      }
+
+      .yellow {
+        background-color: lightyellow;
+      }
+
+      .red {
+        background-color: lightcoral;
+        height: 300px;
+        order: 2;
+      }
+
+      .green {
+        background-color: lightgreen;
+        align-self: flex-end;
+        order: 1;
+      }
+
+      .blue {
+        background-color: lightblue;
+        flex-basis: 1;
+        flex-grow: 1;
+        flex-shrink: 3;
+        /* 1 / 1 (1 fraction de l'espace restant) */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col yellow">yellow</div>
+      <div class="col red">red</div>
+      <div class="col green">green</div>
+      <div class="col blue">blue</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 0 0 0 */
+      * {
+        color: orange;
+      }
+
+      /* 0 0 1 */
+      body {
+        color: purple;
+      }
+
+      /* 0 0 1 */
+      p {
+        color: red;
+      }
+
+      /* 1 0 0 1 1 */
+      p:first-of-type {
+        color: green !important;
+      }
+
+      /* 0 1 1 */
+      p:nth-of-type(odd) {
+        color: pink;
+      }
+
+      /* 0 1 1 */
+      p:last-of-type {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Title</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quos
+      adipisci officia, consectetur nisi ipsam, mollitia nulla harum iste
+      blanditiis est ullam odit impedit beatae. Voluptatem nihil reprehenderit
+      quam explicabo?
+    </p>
+    <p style="color: blue">
+      Voluptates officia ex, minus sit harum vero odio amet inventore! Id minima
+      reiciendis asperiores quas, dolorum architecto autem. Nihil sunt
+      temporibus magni iste repellendus corrupti accusantium illo aliquid libero
+      odio?
+    </p>
+    <p>
+      Perferendis iste ad, dolorum consequatur ratione quae architecto ut
+      dignissimos cumque maiores excepturi reprehenderit laboriosam aut, iusto,
+      sequi voluptatum iure necessitatibus voluptates labore illum amet? Maiores
+      rerum asperiores quae? Repudiandae!
+    </p>
+  </body>
+</html>
