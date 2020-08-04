@@ -1,9 +1,22 @@
 {
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "csscomb": "^4.3.0",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.32",
+    "postcss-html": "^0.36.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0"
   },
   "scripts": {
-    "lint:css": "stylelint '**/*.css' --fix"
+    "lint:css": "stylelint '**/*.css' --fix",
+    "format:csscomb": "csscomb flex/*.css",
+    "format:prettier": "prettier **/*.{css,html} --write",
+    "postcss": "postcss flex/app.css -o dist/app.css"
+  },
+  "dependencies": {
+    "postcss-cli": "^7.1.1"
   }
 }

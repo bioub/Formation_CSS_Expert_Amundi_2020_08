@@ -4,7 +4,10 @@
 }
 
 body {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,32 +23,35 @@ nav ul {
 
 .top-container {
   width: 1150px;
-  margin: 0 auto;
+  margin: 0 auto
+}
 
-  @media (width < 1180px) {
-    width: 900px;
+@media (max-width: 1179px) {
+
+.top-container {
+    width: 900px
+}
   }
 
-  & > header {
+.top-container > header {
     position: relative;
     height: 100px;
     padding: 5px;
     background-color: lightblue;
-
-    & h1 {
-      margin-top: 0;
-    }
-
-    & nav {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 5px;
-      background-color: lightgreen;
-    }
   }
+
+
+.top-container > header h1 {
+  margin-top: 0;
 }
 
+.top-container > header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: lightgreen;
+}
 
 .main-container {
   display: flex;

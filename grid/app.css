@@ -82,7 +82,7 @@ main {
 
 /* tout sauf le premier */
 .breadcrumb li + li::before {
-  content: ' > ';
+  content: " > ";
 }
 
 .gallery {
