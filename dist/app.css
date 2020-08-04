@@ -1,107 +1,70 @@
+@charset "UTF-8";
 /* Sélecteur CSS par spécificité ascendante */
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  font-family: Arial, Helvetica, sans-serif; }
 
 h1 {
-  font-size: 1.4rem;
-}
+  font-size: 1.4rem; }
 
 nav ul {
-  margin: 0;
   padding: 0;
-  list-style-type: none;
-}
+  margin: 0;
+  list-style-type: none; }
 
 .top-container {
   width: 1150px;
-  margin: 0 auto
-}
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "h h" "a m";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100px auto; }
 
-@media (max-width: 1179px) {
+header {
+  grid-area: h;
+  background-color: lightblue;
+  padding: 5px;
+  position: relative; }
+  header h1 {
+    margin-top: 0; }
 
-.top-container {
-    width: 900px
-}
-  }
-
-.top-container > header {
-    position: relative;
-    height: 100px;
-    padding: 5px;
-    background-color: lightblue;
-  }
-
-
-.top-container > header h1 {
-  margin-top: 0;
-}
-
-.top-container > header nav {
+header nav {
+  background-color: lightgreen;
+  padding: 5px;
   position: absolute;
   top: 0;
-  right: 0;
-  padding: 5px;
-  background-color: lightgreen;
-}
+  right: 0; }
 
-.main-container {
-  display: flex;
-}
+aside {
+  grid-area: a;
+  background-color: salmon; }
 
-.main-container > aside {
-  width: 300px;
-  background-color: lightsalmon;
-}
-
-.main-container > aside a {
-  line-height: 30px;
+aside a {
   display: block;
   height: 30px;
-  margin: 1em 0;
-  text-align: center;
+  line-height: 30px;
   background-color: salmon;
-}
+  margin: 1em 0;
+  text-align: center; }
 
-.main-container > main {
+main {
+  grid-area: m;
   flex: 1;
-  padding: 5px;
-}
+  padding: 5px; }
 
 .breadcrumb li {
-  display: inline;
-}
-
-/* tout sauf le dernier
-.breadcrumb li:not(:last-child) {}
- */
-
-/* tout sauf le premier */
-.breadcrumb li + li::before {
-  content: " > ";
-}
+  display: inline; }
+  .breadcrumb li + li::before {
+    content: " > "; }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 8px;
+  gap: 8px; }
 
 .image {
-  width: calc((100% - (8px * 2)) / 3);
-  height: 100px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  background-color: sandybrown;
-}
-
-.image:nth-child(3n + 3) {
-  margin-right: 0;
-}
+  background-color: sandybrown; }
